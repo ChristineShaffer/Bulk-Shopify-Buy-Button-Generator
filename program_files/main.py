@@ -25,9 +25,13 @@ import os
 def read_in_products(path):
     try:
         with open(path, "rU") as infile:
-            readCSV = csv.reader(infile)
-            lines = [line for line in readCSV]
-            return lines[1:]
+            read_csv = csv.reader(infile)
+            read_csv.__next__()
+
+            lines = [line for line in read_csv]
+            lines_set = set((line[0], line[1], line[2], line[3]) for line in lines)
+
+            return lines_set
     except IOError:
         print("Error reading in product csv!")
 

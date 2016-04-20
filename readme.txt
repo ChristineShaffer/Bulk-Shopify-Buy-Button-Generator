@@ -19,7 +19,7 @@
 WHAT THIS PROGRAM DOES
 
 This program auto-generates shopify.com buy buttons for a given set of
-products and their associated handles.
+products.
 
 Products must exist and be buy-button visible on shopify.com in order 
 for buy buttons to link to them.
@@ -29,3 +29,8 @@ USAGE
 
 Place input csv file containing shopify.com-compatible products (the one
 you'd use to upload products to your store) in '/inputs'.
+
+Outputted buy buttons will be localed in '/outputs'.
+
+In order to change options on the buy buttons generated, modify the 'buy_button'
+string located in main.py.
